@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">스크롤 툴바</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_menu_1">menu_1</string>
+    <string name="title_menu_2">menu_2</string>
+</resources>

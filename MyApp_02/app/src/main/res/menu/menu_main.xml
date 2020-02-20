@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        app:showAsAction="never"
+        never : Appbar에 기본적으로 메뉴 표시하지 않음
+        always : 항상 표시, 만약 Appbar의 공간이 넉넉하면 모든 메뉴 보임
+        ifRoom : 공간이 있으면 항목 표시
+        withText : 작업 항목과 함께 제목 텍스트를 표시
+        collapseActionView :
+
+    -->
+    <item
+        android:id="@+id/m_app_about"
+        android:icon="@drawable/ic_account_balance_black_24dp"
+        android:title="앱 정보"
+        app:showAsAction="never" />
+
+    <item
+        android:title="icon"
+        android:icon="@drawable/ic_account_balance_black_24dp"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/m_login"
+        android:title="로그인"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/m_settings"
+        android:icon="@drawable/ic_adb_black_24dp"
+        android:title="설정"
+        app:showAsAction="never" />
+</menu>

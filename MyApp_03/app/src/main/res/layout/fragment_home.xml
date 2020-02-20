@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        TextInputLayout
+        EditText의 향상된 버전
+        새로운 입력 박스를 구성하는 layout (html의 div와 비슷한 기능)
+        layout 내부에서 TextInputEditText를 사용하여 입력받을 수 있게 함
+        포커스되지 않은 곳은 힌트에 설정한 내용을 크게
+        포커스 된 곳은 힌트에 설정한 내용을 작게 보여준다
+    -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayout_name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:privateImeOptions="defaultInputmode=korean"
+            android:hint="이름을 입력하세요" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayout_tel"
+        app:layout_constraintTop_toBottomOf="@id/txtLayout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="전화번호를 입력하세요" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        app:layout_constraintTop_toBottomOf="@id/txtLayout_tel"
+        android:text="저장"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
