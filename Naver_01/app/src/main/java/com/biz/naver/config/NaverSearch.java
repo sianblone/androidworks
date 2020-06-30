@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.biz.naver.config.adapter.MovieAdapter;
-import com.biz.naver.domain.NaverMovieVO;
+import com.biz.naver.domain.NaverMovieItem;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,7 +29,7 @@ public class NaverSearch extends AsyncTask<Integer, Integer, Void> {
 
     private final String NAVER_MOVIE_URL = "https://openapi.naver.com/v1/search/movie.json";
     private String strSearch;
-    private List<NaverMovieVO> mList;
+    private List<NaverMovieItem> mList;
     private RecyclerView recyclerView;
 
     public NaverSearch() {
@@ -42,7 +42,7 @@ public class NaverSearch extends AsyncTask<Integer, Integer, Void> {
         this.recyclerView = recyclerView;
     }
 
-    public List<NaverMovieVO> getmList() {
+    public List<NaverMovieItem> getmList() {
         return mList;
     }
 
@@ -116,11 +116,12 @@ public class NaverSearch extends AsyncTask<Integer, Integer, Void> {
             for(int i = 0; i < resItems.length(); i++) {
                 JSONObject item = resItems.getJSONObject(i);//JSONArray 배열의 0번부터 차례대로 가져오기
 
-                NaverMovieVO mVO = NaverMovieVO.builder()
+                NaverMovieItem mVO = NaverMovieItem.builder()
                         .title(item.getString("title"))
                         .director(item.getString("director"))
                         .actor(item.getString("actor"))
                         .link(item.getString("link"))
+                        .userRating(item.getString("userRating"))
                         .image(item.getString("image"))
                         .build();
 

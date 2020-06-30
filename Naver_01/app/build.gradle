@@ -32,6 +32,31 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+}
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+    // picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // git retrofit
+    //implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+
+    // maven retrofit
+    implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.7.1'
+    implementation group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.7.1'
 }
+
+
+
